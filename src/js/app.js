@@ -33,4 +33,11 @@ window.addEventListener("load", () => {
     // ✅ Cerrar el modal al hacer clic en "Cancelar"
     BTN_CLOSE_POST = document.querySelector("#btn-post-cancel");
     BTN_CLOSE_POST.addEventListener("click", hidepostmodal);
+
+    if (navigator.serviceWorker) {
+        const res = navigator.serviceWorker.register("../../sw.js");
+        if (res) {
+            console.log("Service Worker registrado correctamente");
+        }
+    }
 });
