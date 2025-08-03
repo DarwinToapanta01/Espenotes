@@ -1,4 +1,4 @@
-# 📝 Espenotes - Progressive Web App
+# 📝 Tarea 1: Desarrollo de una PWA Básica con Elementos de Material Design
 
 Espenotes es una aplicación web progresiva (PWA) diseñada para tomar, guardar y consultar notas de manera rápida, simple y elegante. Desarrollada como parte de la materia *Programación Integrativa*, la app hace uso de tecnologías modernas como **Material Design Lite (MDL)**, **localStorage**, **manifest.json** y **Service Worker**, permitiendo su funcionamiento incluso sin conexión a internet.
 
@@ -19,13 +19,9 @@ Espenotes es una aplicación web progresiva (PWA) diseñada para tomar, guardar 
 - ✅ **Código limpio y mantenible**  
   El código está organizado, comentado y sigue buenas prácticas de desarrollo web. La estructura facilita su comprensión y mantenimiento.
 
-## 📸 Capturas de pantalla
-
-> Agrega aquí capturas de la aplicación en uso (opcional pero recomendable)
-
 ## 🎥 Video demostrativo
 
-[🔗 Ver video de demostración](https://drive.google.com/your-demo-link-aqui)  
+[🔗 Ver video de demostración](https://drive.google.com/drive/folders/1aI9n6s5HpvtuY1BloQgEWVgdMv-Bo2fL?usp=sharing)  
 > Muestra todas las funcionalidades: interfaz MDL, uso de localStorage, instalación desde navegador, funcionamiento offline, y experiencia general del usuario.
 
 ## 📁 Estructura del proyecto
