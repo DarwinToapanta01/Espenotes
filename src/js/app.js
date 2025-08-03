@@ -41,3 +41,56 @@ window.addEventListener("load", () => {
         }
     }
 });
+
+const BTN_SUBMIT = document.querySelector("#btn-post-submit");
+const TITLE_INPUT = document.querySelector("#title");
+const DESCRIPTION_INPUT = document.querySelector("#description");
+ 
+// Cargar notas al iniciar
+window.addEventListener("load", () => {
+    // Código existente...
+    loadNotes(); // ← cargar notas existentes
+});
+
+const saveNote = (title, description) => {
+    const note = { title, description, date: new Date().toLocaleString() };
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
+    notes.push(note);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    addNoteToUI(note);
+};
+
+const addNoteToUI = (note) => {
+    const notesContainer = document.createElement("div");
+    notesContainer.className = "mdl-card mdl-shadow--2dp";
+    notesContainer.style.margin = "10px";
+    notesContainer.innerHTML = `
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">${note.title}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            ${note.description}
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <small>${note.date}</small>
+        </div>
+    `;
+    document.querySelector(".page-content").appendChild(notesContainer);
+};
+
+const loadNotes = () => {
+    const notes = JSON.parse(localStorage.getItem("notes")) || [];
+    notes.forEach(addNoteToUI);
+};
+
+BTN_SUBMIT.addEventListener("click", (e) => {
+    e.preventDefault();
+    const title = TITLE_INPUT.value.trim();
+    const description = DESCRIPTION_INPUT.value.trim();
+    if (title && description) {
+        saveNote(title, description);
+        hidepostmodal();
+        TITLE_INPUT.value = "";
+        DESCRIPTION_INPUT.value = "";
+    }
+});
