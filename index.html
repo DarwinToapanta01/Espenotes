@@ -10,6 +10,7 @@
     <meta name="theme-color" content="#673ab7">
     <link rel="icon" type="image/png" href="./src/icons/icon-144x144.png">
     <link rel="manifest" href="./manifest.webmanifest.json">
+    <script async src="https://unpkg.com/pwacompat"></script>
     <link rel="icon" href="./src/icons/icon-512x512.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-amber.min.css" />
@@ -34,6 +35,7 @@
                 </nav>
             </div>
         </header>
+
         <div class="mdl-layout__drawer">
             <!-- <span class="mdl-layout-title">ESPENotes</span> -->
             <nav class="mdl-navigation">
@@ -52,6 +54,10 @@
                 <a class="mdl-navigation__link" href="">
                     <i class="material-icons mdl-color-text--primary">music_video</i>
                     Audios</a>
+                <div class="mdl-navigation__link" app--install id="banner-install">
+                    <i class="material-icons mdl-color-text--primary">get_app</i>
+                    Instalar App
+                </div>
             </nav>
         </div>
         <main class="mdl-layout__content">
